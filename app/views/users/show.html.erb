@@ -7,15 +7,13 @@
 				<h3><%= @user.email %></h3>
 				<h3><%= @user.username %></h3>
 
-				<form action="/edit" method="GET">
-				<input class="brah" type="submit" value="Edit User">
-				</form>
+				<% if current_user and @user == current_user %>
+				    <p><%= link_to "edit profile", edit_user_path(@user) %></p>
+				<% end %>
 				
 				<br>
 
-				<form action="/profile" method="POST">
-				<input class="brah" type="submit" value="Delete User">
-				</form>
+				<h3><%= link_to "Close Your Account", @user, method: :delete, data: {confirm: "Are you sure?"} %></h3>
 
 				<!-- User is Following -->
 				<h3>Following</h3>
