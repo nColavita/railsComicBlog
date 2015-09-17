@@ -1,0 +1,313 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+	font-family: arial;
+	margin: 0;
+	background-image: url('background_image_marvel.jpg');
+	background-repeat: no-repeat;
+}
+
+header {
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	border-bottom: 1px solid #CCC;
+}
+
+nav{
+	font-family: 'Luckiest Guy';
+	font-size: .8em;
+	font-style: oblique;
+	margin: 15px;
+	margin-bottom: 1em;
+	float: right;
+}
+
+#welcome{
+	float: left;
+	margin-left: 10px;
+	margin-top: .7em;
+	letter-spacing: .1em;
+}
+
+nav a{
+	text-decoration: none;
+	padding: 5px;
+	font-size: 1.2em;
+	letter-spacing: .2em;
+	color: orange;
+}
+
+a:hover{
+	color: red;
+}
+
+.bodycenterToPage{
+	margin-top: 25px;
+	display: inline-block;
+	text-align: center;
+}
+
+#news{
+	text-align: left;
+	width: 800px;
+	padding: 10px;
+	background-color: #88F7A6;
+	padding: 0;
+}
+
+/****** Profile Page *******/
+#profileBox{
+	text-align: center;
+}
+
+#profile{
+	margin-top: 80px;
+	margin-left: 400px;
+	background-color: #88F7A6;
+	border:solid black 10px;
+	width: 450px;
+}
+
+#profileCenter{
+	padding: 10px;
+}
+
+#profileBody{
+	text-align: left;
+}
+/**************************/
+.center{
+	text-align: center;
+	border-top: solid black 1px;
+}
+
+.submitForm{
+	height: 80px;
+	/*background-color: #CCC;*/
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding-top: 20px;
+}
+
+.bam{
+	height: 50px;
+	width: 300px;
+}
+
+/*Submit Buttons in Profile Page*/
+.brah {
+	font-family: 'Luckiest Guy';
+	color: orange;
+	background: #fff;
+	font-size: 15px;
+	width: 100px;
+	height: 30px;
+	border-radius: 100px;
+	font-style: oblique;
+	border: 1px solid #900;
+}
+
+/*Post Button*/
+.cool {
+	color: #fff;
+	background: red;
+	border: 1px solid #900;
+	width: 100px;
+	height: 30px;
+	border-radius: 100px;
+	font-family: 'Luckiest Guy';
+	font-size: 20px;
+	font-style: oblique;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+.mainBody{
+	border: solid black 8px;
+	border-top-right-radius: 18px;
+	border-top-left-radius: 18px;
+}
+
+/*Centering the Form Pages*/
+
+.centerForm{
+	text-align: center;
+}
+
+.mainFormBlock{
+	background-image: url('background_image_dc2.jpg'); 
+	font-size: 1.75em;
+	margin-top: 180px;
+	padding-bottom: 10px;
+	border-top: solid black 15px;
+	border-bottom: solid black 15px;
+}
+
+.formTitle{
+	margin-top: 0;
+	margin-bottom: .2em;
+}
+
+.userPosts{
+	/*border-top: solid black 5px;*/
+	border-bottom: solid black 5px;
+}
+
+/****** Rack-Flash ******/
+
+
+/****** Fonts ******/
+
+a{
+	color: white;
+	-webkit-text-stroke-width: .05em;
+	-webkit-text-stroke-color: black;
+	text-decoration: none;
+}
+
+h3, h1{
+	font-family: 'Luckiest Guy';
+	/*color: #ffa700;*/
+	color: white;
+	font-size: 1.5em;
+	-webkit-text-stroke-width: .05em;
+	-webkit-text-stroke-color: black;
+	letter-spacing: .1em;
+}
+
+h1{
+	color:yellow;
+	font-size: 1.5em;
+}
+
+li{
+	font-family: 'Luckiest Guy';
+	font-size: 1.3em;
+	list-style-type: circle;
+}
+
+p{
+	font-family: 'Luckiest Guy';
+	font-size: 1.3em;
+	color: red;
+	/*-webkit-text-stroke-width: .05em;*/
+	-webkit-text-stroke-color: black;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 5px;
+}
+
+#postBody{
+	font-family: arial;	
+	margin-top: 0;
+	font-size: .9em;
+	color: black;
+}
+
+#posts{
+	letter-spacing: .1em;
+}
+
+#editprofile {
+	text-align: center;
+}
+
+/************** Form Styling ***************/
+
+hr {
+	border-color: #8C6B4D;
+	width: 600px;
+	border-top: 0;
+}
+
+.form-style-6{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 16px;
+    background: #f8f8f8;
+    border-radius: 18px;
+    display: none;
+}
+
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 input[type="password"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 input[type="password"]:focus,
+
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+    box-shadow: 0 0 5px red;
+    padding: 3%;
+    border: 1px solid red;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: red;
+    border-bottom: 2px solid;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+}
+
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+    background: red;
+}
