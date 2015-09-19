@@ -1,27 +1,35 @@
 class PostsController < ApplicationController
+	before_action :set_chirp, only: [:show]
+	
+def index
+  @posts = Post.all
+  @post = Post.new
+end
 
 def new
+	@post = Post.new
 end
 
-def index
-  @post = Post.new
-  @posts = Post.all
+def show
+
 end
 
- 
-def create 
- @user = User.find_by(email: params[:email])
- if @user and @user.password == params[:password]
-     session[:user_id] = @user.id 
-     redirect_to posts_path, notice: "logged in!"
-     
-else 
-     redirect_to login_path, notice: "Login info was not correct!"
-  end
+def create
+	@post = Post.create(post_params)
+	redirect_to posts_path, notice: "New post created!"
 end
-    
-def destroy
-     session[:user_id] = nil 
-     redirect_to posts_path, notice: "logged out!"
+
+private
+	def post_params
+		params.require(:post).permit(:body).merge(user: current_user)
+	end
+
+	def set_post
+		begin
+			@post = Post.find(params[:id])
+		rescue
+			flash[:notice] = "That post was not found!"
+			redirect_to posts_path
+		end
 	end
 end

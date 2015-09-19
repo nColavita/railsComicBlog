@@ -6,14 +6,12 @@
 			<% @users.each do |user| %>
 
 				<p> 
-					<a href= "/users/<%= user.id %>"><%= user.username%></a>
-						<% if current_user and current_user != user %>
-							<% if current_user and !current_user.following.include?(user) %>
-								(<a href="/follow/<%= user.id %>">follow</a>)
-							<% else %>
-								(<a href="/unfollow/<%= user.id %>">unfollow</a>)
-							<% end %>
-						<% end %>
+						<!-- current_user and current_user != user %> -->
+							<%= link_to user.username, user_path(user.id) %>
+							<!-- 	(<a href="/follow/<%= user.id %>">follow</a>)
+						<%  %>
+							(<a href="/unfollow/<%= user.id %>">unfollow</a>)
+						<%  %> -->
 				</p>
 				
 			<% end %>

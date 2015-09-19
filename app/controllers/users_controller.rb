@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+before_action :set_user, only: [:show, :edit, :destroy, :update, :follow, :unfollow]
+
 def index
 	@users = User.all
 end
@@ -15,7 +17,6 @@ def create
 end
 
 def show
-	@user = current_user
 end
 
 def profile
@@ -24,7 +25,7 @@ def profile
 end
 
 def edit
-	@user = current_user
+
 end
 
 def destroy
@@ -33,13 +34,28 @@ def destroy
 	redirect_to root_path, notice: "Account Deleted"
 end
 
-def list
-	@users = User.all
-end
-
 
 	private
 		def user_params
 			params.require(:user).permit(:username, :email, :password, :fname, :lname)
 		end
+
+		def set_user
+		        begin
+		            if params[:username]
+		                username = params[:username]
+		                @user = User.where("lower(username) = ?", username.downcase).first 
+		                unless @user 
+		                    flash[:notice] = "That user could not be found."
+		             redirect_to users_path
+		                end
+		            else
+		                @user = User.find(params[:id])
+		            end
+		        rescue 
+		             flash[:notice] = "That user could not be found."
+		             redirect_to users_path
+		        end
+		    end
+
 end

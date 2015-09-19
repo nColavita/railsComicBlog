@@ -180,7 +180,7 @@ a{
 	text-decoration: none;
 }
 
-h3, h1{
+h1, h2, h3{
 	font-family: 'Luckiest Guy';
 	/*color: #ffa700;*/
 	color: white;
@@ -202,7 +202,7 @@ li{
 }
 
 p{
-	font-family: 'Luckiest Guy';
+	/*font-family: 'Luckiest Guy';*/
 	font-size: 1.3em;
 	color: red;
 	/*-webkit-text-stroke-width: .05em;*/
